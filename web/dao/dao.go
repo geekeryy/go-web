@@ -3,8 +3,8 @@ package dao
 import (
 	"github.com/jinzhu/gorm"
 
-	"demo/web/conf"
-	"demo/web/library/igorm"
+	"go-web/web/conf"
+	"go-web/web/library/igorm"
 )
 
 type Dao struct {

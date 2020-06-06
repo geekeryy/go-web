@@ -8,7 +8,7 @@ import (
 
 	"gopkg.in/yaml.v2"
 
-	"demo/web/library/igorm"
+	"go-web/web/library/igorm"
 )
 
 type Config struct {
