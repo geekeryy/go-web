@@ -1,0 +1,8 @@
+mysql:
+  user: root
+  password: wSmyY44e5J9C
+  host: 212.64.36.250:1306
+  database: examination_new_db
+  max_idle_conn: 10
+  max_open_conn: 100
+  conn_max_lifetime: 100
