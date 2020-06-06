@@ -1,9 +1,9 @@
-# go-web
+# GO-WEB
 
 ## 项目规范
 
 
-### git提交规范
+### Git提交规范
 - feat：新功能（feature）
 - fix：修补bug
  -docs：文档（documentation）
@@ -27,3 +27,8 @@
 │
 └── vendor: 项目所需外部包
 ```
+
+### License
+© Jiangyang, 2020~time.Now
+
+Released under the Apache [License](https://github.com/comeonjy/go-web/blob/master/LICENSE)
