@@ -23,7 +23,12 @@ func NewMysql(c *MysqlConf) *gorm.DB {
 
 	conn, err := gorm.Open("mysql", fmt.Sprintf("%s:%s@%s/%s?charset=utf8&parseTime=True&loc=Local", c.User, c.Password, c.Host, c.Database))
 	if err != nil {
-		log.Fatal("connMysql err:", err)
+		log.Println("connMysql err:", err)
+		panic(err)
+	}
+	if err:=conn.DB().Ping();err!=nil {
+		log.Println("mysql ping err:",err)
+		panic(err)
 	}
 
 	conn.DB().SetMaxIdleConns(c.MaxIdleConn)
