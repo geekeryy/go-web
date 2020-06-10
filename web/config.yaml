@@ -6,3 +6,10 @@ mysql:
   max_idle_conn: 10
   max_open_conn: 100
   conn_max_lifetime: 100
+
+#https://es-n3mbz6a1.kibana.tencentelasticsearch.com:5601
+elastic:
+  addresses:
+    - "https://es-n3mbz6a1.public.tencentelasticsearch.com:9200"
+  username: "elastic"
+  password: "Aa1126254578"
