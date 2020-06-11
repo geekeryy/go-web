@@ -6,16 +6,18 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func Init()  {
-	r:=gin.Default()
+func Init(service ...interface{}) {
+	r := gin.Default()
 
 	r.Use()
 
 	r.Any("/", func(context *gin.Context) {
-		context.JSON(http.StatusOK,gin.H{
-			"code":0,
-			"msg":"ok",
-			"err":"nil",
+		context.JSON(http.StatusOK, gin.H{
+			"code": 0,
+			"msg":  "ok",
+			"err":  "nil",
 		})
 	})
+
 }
+
