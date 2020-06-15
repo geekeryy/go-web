@@ -72,15 +72,21 @@ GET /stories?include=subTasks
 │   ├──conf: 配置
 │   ├──dao: 数据访问层
 │   ├──library: 公共库
+│   │  ├── error: 错误处理
+│   │  ├── gateway: 网关[√]
+│   │  ├── igorm: db库[√]
+│   │  ├── middleware: 中间件
+│   │  └── elastic: elasticsearch
 │   ├──models: 数据模型
 │   ├──server
-│   │   └── http: 提供Restful api
+│   │  ├── grpc: 提供grpc接口
+│   │  └── http: 提供Restful api
 │   └───service: 提供服务
 │
 └── vendor: 项目所需外部包
 ```
 
-### License
+## License
 © Jiangyang, 2020~time.Now
 
 Released under the Apache [License](https://github.com/comeonjy/go-web/blob/master/LICENSE)
