@@ -120,7 +120,6 @@ func (g *Gateway) router(apis []Api) {
 			g.r.OPTIONS(api.Path, g.Handler(api))
 		case "Any":
 			g.r.Any(api.Path, g.Handler(api))
-
 		}
 
 	}

@@ -3,7 +3,7 @@ package dao
 import (
 	"github.com/jinzhu/gorm"
 
-	"go-web/web/conf"
+	"go-web/web/app/gateway/conf"
 	"go-web/web/library/igorm"
 )
 

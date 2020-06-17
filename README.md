@@ -1,4 +1,4 @@
-# GO-WEB
+# GO-WEB 微服务架构
 
 ## 项目规范
 
@@ -69,22 +69,29 @@ GET /stories?include=subTasks
 ```
 .
 ├── web
-│   ├──conf: 配置
-│   ├──dao: 数据访问层
-│   ├──library: 公共库
-│   │  ├── error: 错误处理
-│   │  ├── gateway: 网关[√]
-│   │  ├── igorm: db库[√]
-│   │  ├── middleware: 中间件
-│   │  └── elastic: elasticsearch
-│   ├──models: 数据模型
-│   ├──server
-│   │  ├── grpc: 提供grpc接口
-│   │  └── http: 提供Restful api
-│   └───service: 提供服务
+│   ├── library: 公共库
+│   │   ├── error: 错误处理
+│   │   ├── gateway: 网关[√]
+│   │   ├── igorm: db库[√]
+│   │   ├── middleware: 中间件
+│   │   └── elastic: elasticsearch
+│   └── app: 应用程序
+│       └── appname: 服务程序名
+│           ├── cmd: 程序入口
+│           ├── conf: 配置
+│           ├── dao: 数据访问层
+│           ├── models: 数据模型
+│           ├── server: 控制层
+│           │   ├── grpc: 提供grpc接口
+│           │   └── http: 提供Restful api
+│           ├── manager: 通用处理层
+│           └─── service: 业务逻辑层
 │
 └── vendor: 项目所需外部包
 ```
+
+## 项目分层图
+![](http://assets.processon.com/chart_image/5ee9840fe0b34d4dba40cfb7.png)
 
 ## License
 © Jiangyang, 2020~time.Now
