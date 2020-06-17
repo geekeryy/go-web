@@ -3,9 +3,9 @@ package main
 import (
 	"flag"
 
-	"go-web/web/conf"
+	"go-web/web/app/gateway/conf"
 	"go-web/web/library/gateway"
-	"go-web/web/service/user"
+	"go-web/web/app/gateway/service/user"
 )
 
 func main(){
