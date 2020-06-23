@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+// 生成文件的包路径及包名，被引用时的名字，与命令执行路径有关
+option go_package = "go-web/web/protobuf/gateway;pb_gateway";
+
+package pb_gateway;
+
+// 导入包路径，与-I参数有关
+import "go-web/web/protobuf/base/base.proto";
+
+
+
+message User {
+  base_pb.Base bases= 1;
+  int32 ID = 2;
+}
+
+service Service {
+  rpc Demo3(base_pb.Base) returns (User);
+}

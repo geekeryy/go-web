@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option go_package = "go-web/web/protobuf/base;base_pb";
+
+package base_pb;
+
+message Base {
+  int32 code = 1;
+  string msg = 2;
+}
