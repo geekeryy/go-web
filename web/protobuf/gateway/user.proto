@@ -11,10 +11,10 @@ import "go-web/web/protobuf/base/base.proto";
 
 
 message User {
-  base_pb.Base bases= 1;
+  pb_base.Base bases= 1;
   int32 ID = 2;
 }
 
 service Service {
-  rpc Demo3(base_pb.Base) returns (User);
+  rpc Demo3(pb_base.Base) returns (User);
 }

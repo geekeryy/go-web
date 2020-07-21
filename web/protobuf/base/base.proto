@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-option go_package = "go-web/web/protobuf/base;base_pb";
+option go_package = "go-web/web/protobuf/base;pb_base";
 
-package base_pb;
+package pb_base;
 
 message Base {
   int32 code = 1;

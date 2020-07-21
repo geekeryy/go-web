@@ -2,9 +2,9 @@
 // versions:
 // 	protoc-gen-go v1.24.0
 // 	protoc        v3.12.3
-// source: go-web/web/protobuf/base/base.proto
+// source: web/protobuf/base/base.proto
 
-package base_pb
+package pb_base
 
 import (
 	proto "github.com/golang/protobuf/proto"
@@ -37,7 +37,7 @@ type Base struct {
 func (x *Base) Reset() {
 	*x = Base{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_go_web_web_protobuf_base_base_proto_msgTypes[0]
+		mi := &file_web_protobuf_base_base_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -50,7 +50,7 @@ func (x *Base) String() string {
 func (*Base) ProtoMessage() {}
 
 func (x *Base) ProtoReflect() protoreflect.Message {
-	mi := &file_go_web_web_protobuf_base_base_proto_msgTypes[0]
+	mi := &file_web_protobuf_base_base_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -63,7 +63,7 @@ func (x *Base) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Base.ProtoReflect.Descriptor instead.
 func (*Base) Descriptor() ([]byte, []int) {
-	return file_go_web_web_protobuf_base_base_proto_rawDescGZIP(), []int{0}
+	return file_web_protobuf_base_base_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *Base) GetCode() int32 {
@@ -80,37 +80,37 @@ func (x *Base) GetMsg() string {
 	return ""
 }
 
-var File_go_web_web_protobuf_base_base_proto protoreflect.FileDescriptor
+var File_web_protobuf_base_base_proto protoreflect.FileDescriptor
 
-var file_go_web_web_protobuf_base_base_proto_rawDesc = []byte{
-	0x0a, 0x23, 0x67, 0x6f, 0x2d, 0x77, 0x65, 0x62, 0x2f, 0x77, 0x65, 0x62, 0x2f, 0x70, 0x72, 0x6f,
-	0x74, 0x6f, 0x62, 0x75, 0x66, 0x2f, 0x62, 0x61, 0x73, 0x65, 0x2f, 0x62, 0x61, 0x73, 0x65, 0x2e,
-	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x07, 0x62, 0x61, 0x73, 0x65, 0x5f, 0x70, 0x62, 0x22, 0x2c,
-	0x0a, 0x04, 0x42, 0x61, 0x73, 0x65, 0x12, 0x12, 0x0a, 0x04, 0x63, 0x6f, 0x64, 0x65, 0x18, 0x01,
-	0x20, 0x01, 0x28, 0x05, 0x52, 0x04, 0x63, 0x6f, 0x64, 0x65, 0x12, 0x10, 0x0a, 0x03, 0x6d, 0x73,
-	0x67, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x03, 0x6d, 0x73, 0x67, 0x42, 0x22, 0x5a, 0x20,
-	0x67, 0x6f, 0x2d, 0x77, 0x65, 0x62, 0x2f, 0x77, 0x65, 0x62, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f,
-	0x62, 0x75, 0x66, 0x2f, 0x62, 0x61, 0x73, 0x65, 0x3b, 0x62, 0x61, 0x73, 0x65, 0x5f, 0x70, 0x62,
-	0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+var file_web_protobuf_base_base_proto_rawDesc = []byte{
+	0x0a, 0x1c, 0x77, 0x65, 0x62, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2f, 0x62,
+	0x61, 0x73, 0x65, 0x2f, 0x62, 0x61, 0x73, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x07,
+	0x70, 0x62, 0x5f, 0x62, 0x61, 0x73, 0x65, 0x22, 0x2c, 0x0a, 0x04, 0x42, 0x61, 0x73, 0x65, 0x12,
+	0x12, 0x0a, 0x04, 0x63, 0x6f, 0x64, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x05, 0x52, 0x04, 0x63,
+	0x6f, 0x64, 0x65, 0x12, 0x10, 0x0a, 0x03, 0x6d, 0x73, 0x67, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09,
+	0x52, 0x03, 0x6d, 0x73, 0x67, 0x42, 0x22, 0x5a, 0x20, 0x67, 0x6f, 0x2d, 0x77, 0x65, 0x62, 0x2f,
+	0x77, 0x65, 0x62, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2f, 0x62, 0x61, 0x73,
+	0x65, 0x3b, 0x70, 0x62, 0x5f, 0x62, 0x61, 0x73, 0x65, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f,
+	0x33,
 }
 
 var (
-	file_go_web_web_protobuf_base_base_proto_rawDescOnce sync.Once
-	file_go_web_web_protobuf_base_base_proto_rawDescData = file_go_web_web_protobuf_base_base_proto_rawDesc
+	file_web_protobuf_base_base_proto_rawDescOnce sync.Once
+	file_web_protobuf_base_base_proto_rawDescData = file_web_protobuf_base_base_proto_rawDesc
 )
 
-func file_go_web_web_protobuf_base_base_proto_rawDescGZIP() []byte {
-	file_go_web_web_protobuf_base_base_proto_rawDescOnce.Do(func() {
-		file_go_web_web_protobuf_base_base_proto_rawDescData = protoimpl.X.CompressGZIP(file_go_web_web_protobuf_base_base_proto_rawDescData)
+func file_web_protobuf_base_base_proto_rawDescGZIP() []byte {
+	file_web_protobuf_base_base_proto_rawDescOnce.Do(func() {
+		file_web_protobuf_base_base_proto_rawDescData = protoimpl.X.CompressGZIP(file_web_protobuf_base_base_proto_rawDescData)
 	})
-	return file_go_web_web_protobuf_base_base_proto_rawDescData
+	return file_web_protobuf_base_base_proto_rawDescData
 }
 
-var file_go_web_web_protobuf_base_base_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
-var file_go_web_web_protobuf_base_base_proto_goTypes = []interface{}{
-	(*Base)(nil), // 0: base_pb.Base
+var file_web_protobuf_base_base_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
+var file_web_protobuf_base_base_proto_goTypes = []interface{}{
+	(*Base)(nil), // 0: pb_base.Base
 }
-var file_go_web_web_protobuf_base_base_proto_depIdxs = []int32{
+var file_web_protobuf_base_base_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for method output_type
 	0, // [0:0] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -118,13 +118,13 @@ var file_go_web_web_protobuf_base_base_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_go_web_web_protobuf_base_base_proto_init() }
-func file_go_web_web_protobuf_base_base_proto_init() {
-	if File_go_web_web_protobuf_base_base_proto != nil {
+func init() { file_web_protobuf_base_base_proto_init() }
+func file_web_protobuf_base_base_proto_init() {
+	if File_web_protobuf_base_base_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_go_web_web_protobuf_base_base_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_web_protobuf_base_base_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Base); i {
 			case 0:
 				return &v.state
@@ -141,18 +141,18 @@ func file_go_web_web_protobuf_base_base_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_go_web_web_protobuf_base_base_proto_rawDesc,
+			RawDescriptor: file_web_protobuf_base_base_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   1,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_go_web_web_protobuf_base_base_proto_goTypes,
-		DependencyIndexes: file_go_web_web_protobuf_base_base_proto_depIdxs,
-		MessageInfos:      file_go_web_web_protobuf_base_base_proto_msgTypes,
+		GoTypes:           file_web_protobuf_base_base_proto_goTypes,
+		DependencyIndexes: file_web_protobuf_base_base_proto_depIdxs,
+		MessageInfos:      file_web_protobuf_base_base_proto_msgTypes,
 	}.Build()
-	File_go_web_web_protobuf_base_base_proto = out.File
-	file_go_web_web_protobuf_base_base_proto_rawDesc = nil
-	file_go_web_web_protobuf_base_base_proto_goTypes = nil
-	file_go_web_web_protobuf_base_base_proto_depIdxs = nil
+	File_web_protobuf_base_base_proto = out.File
+	file_web_protobuf_base_base_proto_rawDesc = nil
+	file_web_protobuf_base_base_proto_goTypes = nil
+	file_web_protobuf_base_base_proto_depIdxs = nil
 }
