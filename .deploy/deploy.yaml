@@ -1,0 +1,6 @@
+meta:
+    title: "examination-api-server"
+    buildscript: "build.sh"
+    serviceport: 8088
+    serviceid: 
+    language: "golang"  

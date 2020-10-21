@@ -1,4 +1,4 @@
-# GO-WEB 微服务架构
+# GO-WEB 业务框架
 
 ## 项目规范
 
@@ -58,35 +58,26 @@ GET /stories?include=subTasks
 ### Git提交规范
 - feat：新功能（feature）
 - fix：修补bug
- -docs：文档（documentation）
+- docs：文档（documentation）
 - style： 格式（不影响代码运行的变动）
 - refactor：重构（即不是新增功能，也不是修改bug的代码变动）
 - test：增加测试
 - chore：构建过程或辅助工具的变动
 
-## 目录结构
+## 项目结构
 
 ```
 .
-├── web
-│   ├── library: 公共库
-│   │   ├── error: 错误处理
-│   │   ├── gateway: 网关[√]
-│   │   ├── igorm: db库[√]
-│   │   ├── middleware: 中间件
-│   │   └── elastic: elasticsearch
-│   └── app: 应用程序
-│       └── appname: 服务程序名
-│           ├── cmd: 程序入口
-│           ├── conf: 配置
-│           ├── dao: 数据访问层
-│           ├── models: 数据模型
-│           ├── server: 控制层
-│           │   ├── grpc: 提供grpc接口
-│           │   └── http: 提供Restful api
-│           ├── manager: 通用处理层
-│           └─── service: 业务逻辑层
-│
+├── cmd: 服务子命令
+│   ├── job.go: 定时任务
+│   └── server.go: http服务
+├── dao: 数据访问层
+├── models: 数据模型
+├── http: api接口
+├── manager: 通用处理层
+├── service: 业务逻辑层
+├── util: 工具包
+├── main.go: 入口函数
 └── vendor: 项目所需外部包
 ```
 
