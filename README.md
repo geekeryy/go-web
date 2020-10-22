@@ -1,5 +1,18 @@
 # GO-WEB 业务框架
 
+## TODO
+- [ ] 应用程序上下文
+- [ ] 数据访问层
+- [ ] 定时任务
+- [ ] 工具库
+
+## Git Flow 分支管理
+- master：主分支（用于版本发布，始终与线上一致）
+- dev：开发分支（用于开发，提测时，从dev检出release-1.0.0分支）
+- release: 预发布（用于测试，测试中有问题直接修改，测试完成后合并入master和dev）
+- feature：功能分支（用于功能开发，完成后合并到dev）
+- hotfix：修复bug（从master分出来，完成后合并到master和dev）
+
 ## 项目规范
 
 ### API规范 
@@ -41,7 +54,7 @@ GET /stories?include=subTasks
 ```json
 {
   "code": 1001,
-  "msg": "数据更新失败",
+  "msg": "数据更新失败"
 }
 ```
 成功示例：
@@ -68,16 +81,17 @@ GET /stories?include=subTasks
 
 ```
 .
-├── cmd: 服务子命令
-│   ├── job.go: 定时任务
-│   └── server.go: http服务
+├── cmd: 服务命令
 ├── dao: 数据访问层
 ├── models: 数据模型
-├── http: api接口
-├── manager: 通用处理层
+├── router: 路由
+├── middlewares: http中间件
 ├── service: 业务逻辑层
 ├── util: 工具包
-├── main.go: 入口函数
+│   ├── database: 数据库
+│   ├── jwt: 令牌
+│   ├── log: 日志
+│   └── email: 邮件
 └── vendor: 项目所需外部包
 ```
 
@@ -85,7 +99,7 @@ GET /stories?include=subTasks
 ![](http://assets.processon.com/chart_image/5ee9840fe0b34d4dba40cfb7.png)
 
 ## License
-© Jiangyang, 2020~time.Now
+© JiangYang, 2020~time.Now
 
 Released under the Apache [License](https://github.com/comeonjy/go-web/blob/master/LICENSE)
 
