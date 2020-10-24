@@ -1,6 +1,0 @@
-meta:
-    title: "go-web"
-    buildscript: "build.sh"
-    serviceport: 8080
-    serviceid: 
-    language: "golang"  

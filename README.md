@@ -10,8 +10,9 @@
 - master：主分支（用于版本发布，始终与线上一致）
 - dev：开发分支（用于开发，提测时，从dev检出release-1.0.0分支）
 - release: 预发布（用于测试，测试中有问题直接修改，测试完成后合并入master和dev）
-- feature：功能分支（用于功能开发，完成后合并到dev）
-- hotfix：修复bug（从master分出来，完成后合并到master和dev）
+- feature-*：功能分支（用于功能开发，完成后合并到dev）
+- hotfix-*：修复bug（从master分出来，完成后合并到master和dev）
+![](http://assets.processon.com/chart_image/5f93a2e15653bb06ef13def8.png)
 
 ## 项目规范
 

@@ -1,4 +1,6 @@
-FROM golang:1.15-alpine as builder
+FROM golang:1.15 as builder
+
+WORKDIR /app
 
 COPY . .
 
@@ -8,11 +10,14 @@ RUN GOOS=linux CGO_ENABLED=0 \
   go build -mod=vendor -ldflags="-s -w" -installsuffix cgo -o server main.go
 
 
-FROM golang:1.15-alpine as runner
+FROM golang:1.15 as runner
 
 WORKDIR /app
 
-COPY --from=builder /server /
+COPY --from=builder /app/server .
+COPY --from=builder /app/config.yaml .
+
+EXPOSE 8080
 
 ENV TZ=Asia/Shanghai
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
