@@ -16,6 +16,37 @@
 
 ## 项目规范
 
+### go文件模板（IDEA）
+```
+// @Description  TODO
+// @Author  	 ${USER}  
+// @Created  	 ${DATE} ${TIME}
+package ${GO_PACKAGE_NAME}
+
+#if (${GO_PACKAGE_NAME}=="controllers" || ${GO_PACKAGE_NAME}=="services" || ${GO_PACKAGE_NAME}=="dao" )
+	
+	#set($file_name = ${StringUtils.removeAndHump($NAME)})
+	#set($package_name = ${StringUtils.removeAndHump(${GO_PACKAGE_NAME})})
+	
+	#set($end = $package_name.length()+(-1))
+	#set($package_name = $package_name.substring(0,$end))
+	
+	#if (${GO_PACKAGE_NAME}=="dao")
+		#set ($package_name = "Repo")
+	#end
+	
+	type ${file_name}${package_name} struct{
+		// TODO
+	}
+	
+	func New${file_name}${package_name}() *${file_name}${package_name} {
+		return &${file_name}${package_name}{}
+	}
+
+#end 
+
+```
+
 ### API规范 
 [Restful](http://kaelzhang81.github.io/2019/05/24/Restful-API%E8%AE%BE%E8%AE%A1%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/)
 - URL
@@ -72,7 +103,7 @@ GET /stories?include=subTasks
 ### Git提交规范
 - feat：新功能（feature）
 - fix：修补bug
-- docs：文档（documentation）
+- doc:：文档（documentation）
 - style： 格式（不影响代码运行的变动）
 - refactor：重构（即不是新增功能，也不是修改bug的代码变动）
 - test：增加测试
@@ -87,7 +118,7 @@ GET /stories?include=subTasks
 ├── models: 数据模型
 ├── router: 路由
 ├── middlewares: http中间件
-├── service: 业务逻辑层
+├── services: 业务逻辑层
 ├── util: 工具包
 │   ├── database: 数据库
 │   ├── jwt: 令牌
@@ -103,5 +134,3 @@ GET /stories?include=subTasks
 © JiangYang, 2020~time.Now
 
 Released under the Apache [License](https://github.com/comeonjy/go-web/blob/master/LICENSE)
-
-123

@@ -13,7 +13,7 @@ import (
 
 // db instance
 var (
-	DB   *gorm.DB
+	db   *gorm.DB
 	once sync.Once
 )
 
@@ -46,14 +46,17 @@ func Init() {
 		}
 
 		logrus.Info("mysql connect successfully")
-		DB = db
 	})
+}
+
+func GetCollection() *gorm.DB {
+	return db
 }
 
 // Close method
 func Close() error {
-	if DB != nil {
-		if err := DB.Close(); err != nil {
+	if db != nil {
+		if err := db.Close(); err != nil {
 			return errors.WithStack(err)
 		}
 	}

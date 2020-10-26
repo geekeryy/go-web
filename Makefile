@@ -26,5 +26,13 @@ dd:
 	# 创建新容器
 	docker run -d --name $(CONTAINER_NAME) -p 80:8080 $(IMAGE_TAG)
 
+	@echo "Congratulations on your successful deployment of go-web service!"
+	@echo "Now,open http://127.0.0.1/ping to use it!"
+
+# k8s 部署
+kd:
+
+
+
 
 
