@@ -16,6 +16,14 @@ github.com/aws/aws-sdk-go/internal/strings
 github.com/aws/aws-sdk-go/internal/sync/singleflight
 github.com/aws/aws-sdk-go/private/protocol
 github.com/aws/aws-sdk-go/private/protocol/rest
+# github.com/comeonjy/util v0.0.0-20201102075632-56127a9525ad
+## explicit
+github.com/comeonjy/util/config
+github.com/comeonjy/util/jwt
+github.com/comeonjy/util/log
+github.com/comeonjy/util/mongodb
+github.com/comeonjy/util/mysql
+github.com/comeonjy/util/server
 # github.com/dgrijalva/jwt-go v3.2.0+incompatible
 ## explicit
 github.com/dgrijalva/jwt-go
@@ -62,7 +70,7 @@ github.com/hashicorp/hcl/json/scanner
 github.com/hashicorp/hcl/json/token
 # github.com/inconshreveable/mousetrap v1.0.0
 github.com/inconshreveable/mousetrap
-# github.com/jinzhu/gorm v1.9.12
+# github.com/jinzhu/gorm v1.9.16
 ## explicit
 github.com/jinzhu/gorm
 github.com/jinzhu/gorm/dialects/mysql
@@ -84,6 +92,8 @@ github.com/leodido/go-urn
 github.com/magiconair/properties
 # github.com/mattn/go-isatty v0.0.12
 github.com/mattn/go-isatty
+# github.com/mattn/go-sqlite3 v2.0.1+incompatible
+## explicit
 # github.com/mitchellh/mapstructure v1.1.2
 github.com/mitchellh/mapstructure
 # github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd
@@ -113,7 +123,7 @@ github.com/spf13/cobra
 github.com/spf13/jwalterweatherman
 # github.com/spf13/pflag v1.0.5
 github.com/spf13/pflag
-# github.com/spf13/viper v1.7.0
+# github.com/spf13/viper v1.7.1
 ## explicit
 github.com/spf13/viper
 # github.com/subosito/gotenv v1.2.0
@@ -203,12 +213,10 @@ google.golang.org/protobuf/runtime/protoiface
 google.golang.org/protobuf/runtime/protoimpl
 # gopkg.in/alexcesaro/quotedprintable.v3 v3.0.0-20150716171945-2caba252f4dc
 ## explicit
-gopkg.in/alexcesaro/quotedprintable.v3
 # gopkg.in/check.v1 v1.0.0-20190902080502-41f04d3bba15
 ## explicit
 # gopkg.in/gomail.v2 v2.0.0-20160411212932-81ebce5c23df
 ## explicit
-gopkg.in/gomail.v2
 # gopkg.in/ini.v1 v1.51.0
 gopkg.in/ini.v1
 # gopkg.in/yaml.v2 v2.3.0

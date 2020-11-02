@@ -1,13 +1,13 @@
 package cmd
 
 import (
+	"github.com/comeonjy/util/config"
+	"github.com/comeonjy/util/log"
+	"github.com/comeonjy/util/mongodb"
+	"github.com/comeonjy/util/mysql"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
-	"github.com/spf13/viper"
-	"go-web/util/database/mongodb"
-	"go-web/util/database/mysql"
-	"go-web/util/log"
 )
 
 var cfgFile string
@@ -16,7 +16,7 @@ var rootCmd = &cobra.Command{
 	Use: "server",
 	PersistentPreRun: func(cmd *cobra.Command, args []string) {
 		log.Init()
-		mysql.Init()
+		mysql.Init(config.GetConfig().Mysql)
 		mongodb.Init()
 
 	},
@@ -47,7 +47,6 @@ func init() {
 
 	rootCmd.AddCommand(httpCmd)
 	rootCmd.AddCommand(jobCmd)
-	rootCmd.AddCommand(migrateCmd)
 }
 
 func Execute() {
@@ -57,18 +56,5 @@ func Execute() {
 }
 
 func initConfig() {
-	if cfgFile != "" {
-		viper.SetConfigFile(cfgFile)
-	} else {
-		viper.SetConfigName("config")
-		viper.SetConfigType("yaml")
-		viper.AddConfigPath(".")
-	}
-
-	err := viper.ReadInConfig()
-	if err == nil {
-		logrus.Info("Using config file:", viper.ConfigFileUsed())
-	} else {
-		logrus.Fatal(err)
-	}
+	config.LoadConfig(cfgFile)
 }

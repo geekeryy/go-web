@@ -1,7 +1,7 @@
 package middlewares
 
 import (
-	"go-web/util/jwt"
+	"github.com/comeonjy/util/jwt"
 	"strings"
 
 	"github.com/gin-gonic/gin"

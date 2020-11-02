@@ -4,20 +4,20 @@
 package dao
 
 import (
+	"github.com/comeonjy/util/mongodb"
+	"github.com/comeonjy/util/mysql"
 	"github.com/jinzhu/gorm"
-	"go-web/util/database/mongodb"
-	"go-web/util/database/mysql"
 	"go.mongodb.org/mongo-driver/mongo"
 )
 
 type DemoRepo struct {
-	db *gorm.DB
+	db    *gorm.DB
 	mongo *mongo.Collection
 }
 
 func NewDemoRepo() *DemoRepo {
 	return &DemoRepo{
-		db:mysql.GetCollection(),
+		db:    mysql.Conn(),
 		mongo: mongodb.GetCollection("demo"),
 	}
 }
