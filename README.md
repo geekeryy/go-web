@@ -86,7 +86,8 @@ GET /stories?include=subTasks
 ```json
 {
   "code": 1001,
-  "msg": "数据更新失败"
+  "msg": "数据更新失败",
+  "err": "debug模式开启错误详情"
 }
 ```
 成功示例：
@@ -129,6 +130,10 @@ GET /stories?include=subTasks
 
 ## 项目分层图
 ![](http://assets.processon.com/chart_image/5ee9840fe0b34d4dba40cfb7.png)
+
+## JetBrains OS licenses
+go-web是根据JetBrains s.r.o 授予的免费JetBrains开源许可证与GoLand一起开发的，因此在此我要表示感谢。
+<a href="https://www.jetbrains.com/?from=go-web"><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gkl0xz7y4uj30zz0u042c.jpg" width="50%"  /></a>
 
 ## License
 © JiangYang, 2020~time.Now
