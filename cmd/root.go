@@ -12,12 +12,34 @@ import (
 
 var cfgFile string
 
+func init() {
+	cobra.OnInitialize(initConfig)
+	rootCmd.PersistentFlags().StringVarP(&cfgFile, "config", "c", "./config.yaml", "配置文件")
+
+	rootCmd.AddCommand(httpCmd)
+	rootCmd.AddCommand(jobCmd)
+}
+
+// cmd 执行之前初始化
+func initConfig() {
+	config.LoadConfig(cfgFile)
+}
+
+// 根命令入口
+func Execute() {
+	if err := rootCmd.Execute(); err != nil {
+		logrus.Fatal(err)
+	}
+}
+
+
 var rootCmd = &cobra.Command{
 	Use: "server",
 	PersistentPreRun: func(cmd *cobra.Command, args []string) {
-		log.Init()
-		mysql.Init(config.GetConfig().Mysql)
-		mongodb.Init()
+		cfg := config.GetConfig()
+		log.Init(cfg.Log)
+		mysql.Init(cfg.Mysql)
+		mongodb.Init(cfg.Mongodb)
 
 	},
 	PersistentPostRunE: func(cmd *cobra.Command, args []string) (err error) {
@@ -37,24 +59,4 @@ var rootCmd = &cobra.Command{
 
 		return
 	},
-}
-
-func init() {
-
-	cobra.OnInitialize(initConfig)
-
-	rootCmd.PersistentFlags().StringVarP(&cfgFile, "config", "c", "./config.yaml", "配置文件")
-
-	rootCmd.AddCommand(httpCmd)
-	rootCmd.AddCommand(jobCmd)
-}
-
-func Execute() {
-	if err := rootCmd.Execute(); err != nil {
-		logrus.Fatal(err)
-	}
-}
-
-func initConfig() {
-	config.LoadConfig(cfgFile)
 }

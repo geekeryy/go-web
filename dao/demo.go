@@ -18,6 +18,6 @@ type DemoRepo struct {
 func NewDemoRepo() *DemoRepo {
 	return &DemoRepo{
 		db:    mysql.Conn(),
-		mongo: mongodb.GetCollection("demo"),
+		mongo: mongodb.GetConn("demo"),
 	}
 }

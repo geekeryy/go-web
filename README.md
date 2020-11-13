@@ -1,4 +1,16 @@
 # GO-WEB 业务框架
+![Website](https://img.shields.io/website?url=https%3A%2F%2Fwww.jiangyang.me)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/comeonjy/go-web)
+![GitHub](https://img.shields.io/github/license/comeonjy/go-web)
+![GitHub issues](https://img.shields.io/github/issues/comeonjy/go-web)
+![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/comeonjy/go-web)
+![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/comeonjy/go-web)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/comeonjy/go-web)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/w/comeonjy/go-web)
+![GitHub last commit](https://img.shields.io/github/last-commit/comeonjy/go-web)
+![GitHub repo size](https://img.shields.io/github/repo-size/comeonjy/go-web)
+![GitHub language count](https://img.shields.io/github/languages/count/comeonjy/go-web)
+![GitHub top language](https://img.shields.io/github/languages/top/comeonjy/go-web)
 
 ## TODO
 - [ ] 应用程序上下文
@@ -133,7 +145,7 @@ GET /stories?include=subTasks
 
 ## JetBrains OS licenses
 go-web是根据JetBrains s.r.o 授予的免费JetBrains开源许可证与GoLand一起开发的，因此在此我要表示感谢。
-<a href="https://www.jetbrains.com/?from=go-web"><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gkl0xz7y4uj30zz0u042c.jpg" width="50%"  /></a>
+<a href="https://www.jetbrains.com/?from=go-web" target="_blank"><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gkl0xz7y4uj30zz0u042c.jpg" width="50%"  /></a>
 
 ## License
 © JiangYang, 2020~time.Now
